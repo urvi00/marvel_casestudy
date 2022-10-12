@@ -1,2 +1,0 @@
-public_key = '486e33cb6586570842beb1fdc21db6c2'
-private_key = '4893102e65894f0350a76693dff1b2bc9418a52a'
