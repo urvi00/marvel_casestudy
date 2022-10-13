@@ -1,8 +1,16 @@
-from keys import private_key, public_key
+import os
+from dotenv import load_dotenv
+from pathlib import Path
 from functions import create_character_df, filter_characters
 import hashlib
 
-#asking user if they want to input their private key or want to use the locally available key
+# getting keys from .env 
+path = Path('.')/'.env'
+load_dotenv()
+private_key = os.getenv('private_key')
+public_key = os.getenv('public_key')
+
+#asking user if they want to input their own private key or want to use the fetched env variable private_key
 flag_private_key = input("If you want to enter private key manually, enter True. To use the key saved in local file, press Enter.\n")
 if flag_private_key=='True':
     privateKey = input("Enter private key\n")
@@ -14,7 +22,7 @@ publicKey = public_key
 ts = 1
 hash = hashlib.md5((str(ts)+privateKey+publicKey).encode()).hexdigest()
 
-#asking user for starting letter to call the API and create dataframe
+#asking user for starting letter to call the API and creating character dataframe
 nameStartWith = input("Input the starting letter of names of characters you want\n")
 char_df = create_character_df(input_apikey=publicKey, input_hash=hash, nameStartWith=nameStartWith)
 print(char_df)
