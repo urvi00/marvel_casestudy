@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+marvel_characters/__init__.py
+marvel_characters/functions.py
+marvel_characters.egg-info/PKG-INFO
+marvel_characters.egg-info/SOURCES.txt
+marvel_characters.egg-info/dependency_links.txt
+marvel_characters.egg-info/top_level.txt

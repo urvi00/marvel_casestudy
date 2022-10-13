@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: marvel-characters
+Version: 0.1
+Summary: Calling Marvel API to create a dataframe of characters, which can be filtered
+Author: Urvi Gupta
+Author-email: urviguptareads@gmail.com
+License-File: LICENSE

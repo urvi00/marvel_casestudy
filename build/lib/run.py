@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
-from marvel_characters.functions import create_character_df, filter_characters
+from functions import create_character_df, filter_characters
 import hashlib
 
 # getting keys from .env 
